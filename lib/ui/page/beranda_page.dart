@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kependudukan/ui/widget/profile_card.dart';
 
 class BerandaPage extends StatelessWidget {
   const BerandaPage({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class BerandaPage extends StatelessWidget {
         child: ListView(
           children: [
             // TODO Buat Tampilan Untuk Profile
-            // ProfileCard(),
+            ProfilCard(),
 
             // TODO Buat tampilan untuk Address
             // AddressCard(),
