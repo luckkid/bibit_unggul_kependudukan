@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kependudukan/theme/my_theme.dart';
 import 'package:kependudukan/ui/page/navigation_page.dart';
 
 void main() {
@@ -12,14 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(color: Color(0xFF77529C)),
-        scaffoldBackgroundColor: const Color(0xFFF2F2F2),
-        colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.deepPurple,
-          accentColor: const Color(0xFF77529C),
-        ),
-      ),
+      theme: MyTheme.light(),
+      darkTheme: MyTheme.dark(),
       home: const NavigationPage(),
     );
   }

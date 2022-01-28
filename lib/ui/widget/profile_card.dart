@@ -13,6 +13,7 @@ class ProfilCard extends StatelessWidget {
       child: Row(
         children: [
           CircleAvatar(
+            backgroundColor: Theme.of(context).colorScheme.primary,
             backgroundImage: AssetImage('assets/61.jpg'),
             radius: 25,
           ),
@@ -25,7 +26,10 @@ class ProfilCard extends StatelessWidget {
               children: [
                 Text(
                   'Luck Kid Wu',
-                  style: TextStyle(color: Colors.white),
+                  style: Theme.of(context)
+                      .textTheme
+                      .subtitle1!
+                      .copyWith(color: Palette.onPrimary),
                 ),
                 SizedBox(
                   height: 5,
@@ -44,33 +48,6 @@ class ProfilCard extends StatelessWidget {
           SizedBox(
             height: 24,
           )
-        ],
-      ),
-    );
-    Container(
-      padding: const EdgeInsets.all(8.0),
-      color: Color(0xFF5B397D),
-      child: Row(
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Center(
-                  child: Text(
-                    'Jl. Madubronto RW 05, Kel. Patangpuluhan, Kec. Wirobrajan, Kota Yogyakarta - DI Yogyakarta',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Text(
-            'This is Google Fonts',
-            style: GoogleFonts.inter(),
-          ),
         ],
       ),
     );
