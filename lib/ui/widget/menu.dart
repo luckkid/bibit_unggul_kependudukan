@@ -1,33 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:kependudukan/theme/palette.dart';
+import 'package:kependudukan/ui/widget/menu_card.dart';
 
-class MenuCard extends StatelessWidget {
-  const MenuCard({Key? key}) : super(key: key);
+class Menu extends StatelessWidget {
+  const Menu({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return Container(
       child: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: Row(
+        padding: const EdgeInsets.only(left: 20, right: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CircleAvatar(
-              radius: 15,
-              child: Icon(
-                Icons.add,
-                color: Palette.kesehatanColor,
-              ),
-            ),
-            SizedBox(
-              width: 25,
+            const SizedBox(
+              height: 28,
             ),
             Text(
-              'Kesehatan',
+              'Menu Utama',
               style: Theme.of(context)
                   .textTheme
                   .subtitle1!
-                  .copyWith(color: Palette.onBackground),
-            )
+                  .copyWith(color: Theme.of(context).colorScheme.onBackground),
+            ),
+            const SizedBox(
+              height: 14,
+            ),
+            const MenuCard(
+              iconData: Icons.medical_services,
+              title: "Kesehatan",
+              iconColor: Palette.kesehatanColor,
+            ),
+            const MenuCard(
+              iconData: Icons.accessibility,
+              title: "Kesejahteraan",
+              iconColor: Palette.kesejahteraanColor,
+            ),
           ],
         ),
       ),

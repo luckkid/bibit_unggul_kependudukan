@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kependudukan/ui/widget/address_card.dart';
 import 'package:kependudukan/ui/widget/menu.dart';
+import 'package:kependudukan/ui/widget/menu_card.dart';
 import 'package:kependudukan/ui/widget/profile_card.dart';
 
 class BerandaPage extends StatelessWidget {
@@ -19,7 +20,7 @@ class BerandaPage extends StatelessWidget {
             AddresCard(),
 
             // TODO Buat tampilan untuk menu utama
-            MenuCard(),
+            Menu(),
           ],
         ),
       ),
